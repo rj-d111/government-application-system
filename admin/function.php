@@ -37,9 +37,9 @@ session_start();
          
          header("Location: home.php");
         }else{
-            //   header("Location: login.php?incorrect=true");
+            header("Location: login.php?incorrect=true");
         }
     }else{
-        // header("Location: login.php?incorrect=true");
+        header("Location: login.php?incorrect=true");
     }
     ?>
