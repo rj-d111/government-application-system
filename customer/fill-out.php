@@ -16,12 +16,18 @@
 
 <body>
     <!-- Start of Logo -->
-    <div class="container d-flex align-items-center my-3 ">
-        <a class="navbar-brand" href="#">
-            <img src="../img/government-registration-logo.png" alt="Bootstrap" style="max-width: 50px;">
-        </a>
-        <h2 class="text-success ms-3">ONLINE GOVERNMENT APPLICATION SYSTEM</h2>
+    <div class="container d-flex align-items-center my-3 mx-auto text-center">
+        <div class="d-flex align-items-center me-auto">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="../img/government-registration-logo.png" alt="Bootstrap" style="max-width: 50px; margin-right: 10px;">
+                <h2 class="text-success ms-0">ONLINE GOVERNMENT APPLICATION SYSTEM</h2>
+            </a>
+        </div>
+        <div class="text-end">
+            <a href="../admin/login.php" class="text-success text-decoration-none fw-bold">ADMIN LOGIN</a>
+        </div>
     </div>
+
     <!-- End of Logo -->
     <!-- Start of Navbar -->
     <nav class="nav justify-content-center bg-success">
@@ -114,15 +120,15 @@
             <div class="row mt-3">
                 <div class="col-md-4">
                     <label for="formFile" class="form-label">Birth Certificate</label>
-                    <input class="form-control" name="birthCertificate" type="file" id="formFile">
+                    <input class="form-control" name="birthCertificate" type="file" id="formFile" required>
                 </div>
                 <div class="col-md-4">
                     <label for="formFile" class="form-label">Proof of Residency (Ex. Billing Statement)</label>
-                    <input class="form-control" name="proofOfResidency" type="file" id="formFile">
+                    <input class="form-control" name="proofOfResidency" type="file" id="formFile" required>
                 </div>
                 <div class="col-md-4">
                     <label for="formFile" class="form-label">2X2 Picture (Format)</label>
-                    <input class="form-control" name="clientPicture" type="file" id="formFile">
+                    <input class="form-control" name="clientPicture" type="file" id="formFile" required>
                 </div>
             </div>
             <div class="row mt-5 text-center">

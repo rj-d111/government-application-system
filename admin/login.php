@@ -38,13 +38,16 @@
                     <img src="../img/admin-icon.png" alt="" width="72" height="72" class="mb-4">
                     <h1 class="h3 mb-3 fw-bold">ADMIN LOG IN</h1>
                 </div>
+                <?php if(isset($_GET['incorrect']) && $_GET['incorrect']){ ?>
+                <div class="alert alert-danger" role="alert">Incorrect Email or Password</div>
+                <?php }?>
                 <div class="mb-3">
                     <label for="inputEmail" class="form-label">Email address</label>
-                    <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>
+                    <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required="" autofocus="">
                 </div>
                 <div class="mb-3">
                     <label for="inputPassword" class="form-label">Password</label>
-                    <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+                    <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required="">
                 </div>
                 <div class="form-check mb-3">
                     <input type="checkbox" value="remember-me" id="rememberMe" class="form-check-input">
@@ -53,7 +56,7 @@
                 <div class="text-center">
                     <button class="btn btn-success btn-block" value="admin-log-in" name="submit" type="submit">Sign in</button>
                 </div>
-                <p class="mt-5 mb-3 text-muted text-center">&copy; 2023 ALL RIGHTS RESERVED</p>
+                <p class="mt-5 mb-3 text-muted text-center">© 2023 ALL RIGHTS RESERVED</p>
             </form>
             <!-- End of Login Page -->
         </div>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Go to db-conn file
 include "../php-connect/db-conn.php";
 
@@ -58,7 +59,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
              return false;
          }
  
-         // Create a folder for each customer using FormID
+         // Create a folder for each customer using customerID
          createFolder($folderName);
  
          // Move the uploaded file to the specified folder
@@ -67,36 +68,42 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
  
          return $destination; // Return the file path for database storage
      }
+
+     $query = "INSERT INTO tbl_customer (firstName, lastName, middleName, dateOfBirth, gender, bloodType, countryOfBirth, province, municipalityCity, barangay, address)
+         VALUES ('$firstName', '$lastName', '$middleName', '$dateOfBirth', '$gender', '$bloodType', '$countryOfBirth', '$province', '$municipalityCity', '$barangay', '$address')";
+     mysqli_query($conn, $query);
+
  
-     // Get FormID (replace this with your actual FormID retrieval logic)
-     $formID = 125; // Replace with your logic to get FormID
  
-     // Upload Birth Certificate
-     $birthCertificatePath = uploadFile('birthCertificate', 'uploads/' . $formID, $allowedFormats, $maxFileSize);
  
-     // Upload Proof of Residency
-     $proofOfResidencyPath = uploadFile('proofOfResidency', 'uploads/' . $formID, $allowedFormats, $maxFileSize);
- 
-     // Upload Client Picture
-     $clientPicturePath = uploadFile('clientPicture', 'uploads/' . $formID, $allowedFormats, $maxFileSize);
- 
-     // Now you can use $birthCertificatePath, $proofOfResidencyPath, $clientPicturePath for database storage
+        // Get the auto-incremented ID of the last inserted record
+        $customerID = mysqli_insert_id($conn);
+      
+        //Pass the customerID to another PHP file
+        $_SESSION['customerID'] = $customerID;
+
+        echo $customerID;
+        // Upload Birth Certificate
+        $birthCertificatePath = uploadFile('birthCertificate', 'uploads/' . $customerID, $allowedFormats, $maxFileSize);
+
+        // Upload Proof of Residency
+        $proofOfResidencyPath = uploadFile('proofOfResidency', 'uploads/' . $customerID, $allowedFormats, $maxFileSize);
+
+        // Upload Client Picture
+        $clientPicturePath = uploadFile('clientPicture', 'uploads/' . $customerID, $allowedFormats, $maxFileSize);
 
 
+            //put into the database   
+         $sql = "UPDATE tbl_customer SET birthCertificate='$birthCertificatePath', proofOfResidency='$proofOfResidencyPath', 
+         clientPicture='$clientPicturePath' WHERE customerID='$customerID'";
+        mysqli_query($conn, $sql);
 
-     //put into the database
-
-     // Assuming you have retrieved the file paths from the file upload logic
-     // $birthCertificatePath, $proofOfResidencyPath, $clientPicturePath
-     
-     $query = "INSERT INTO tbl_customer (firstName, lastName, middleName, dateOfBirth, gender, bloodType, countryOfBirth, province, municipalityCity, barangay, address, birthCertificate, proofOfResidency, clientPicture)
-     VALUES ('$firstName', '$lastName', '$middleName', '$dateOfBirth', '$gender', '$bloodType', '$countryOfBirth', '$province', '$municipalityCity', '$barangay', '$address', '$birthCertificatePath', '$proofOfResidencyPath', '$clientPicturePath')";
-    mysqli_query($conn, $query);
-
-    echo "<script>alert('Successfully Added');</script>";
-
-     //Return to fill out form
-    header("Location: fill-out.php");
+        
+        echo "<script>alert('The id is $customerID');</script>";
+        
+        //Return to fill out form
+        header("Location: success.php");
+        exit();
 }
 
 
