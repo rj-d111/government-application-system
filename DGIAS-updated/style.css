@@ -481,13 +481,7 @@ input[type="submit"] {
 	outline: none;
 }
 
-.disc-page {
-	height: 70vh;
-	display: flex;
-	flex-direction: column;
-}
-
-.pwd-disc-page {
+.brgy-disc-page {
 	height: 70vh;
 	display: flex;
 	flex-direction: column;
@@ -499,7 +493,7 @@ input[type="submit"] {
 	font-size: 18px;
 }
 
-.disclaimer {
+.brgy-disclaimer {
 	margin-left: 50px;
 	margin-top: 100px;
 	background-color: #d9d9d9;
@@ -510,7 +504,7 @@ input[type="submit"] {
 	height: 150px;
 }
 
-.disclaimer h3 {
+.brgy-disclaimer h3 {
 	color: red;
 }
 
@@ -527,15 +521,6 @@ input[type="submit"] {
 
 .reg-page {
 	height: 105vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-image: url(bg.jpg);
-	background-size: cover;
-}
-
-.pwd-reg-page {
-	height: 120vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
