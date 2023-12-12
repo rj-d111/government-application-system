@@ -1,4 +1,33 @@
 /* Teal Color */
+
+:root{
+	--dark-teal: #294278;
+}	
+
 .bg-teal{
-    background-color: var(--bs-teal);
+
+    background-color: var(--dark-teal);
+}
+
+.text-teal{
+    color: var(--dark-teal);
+}
+
+
+.pwd-reg-page {
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+}
+
+.reg-form {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 10px;
 }

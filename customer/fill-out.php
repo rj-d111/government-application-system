@@ -20,17 +20,17 @@
         <div class="d-flex align-items-center me-auto">
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="../img/government-registration-logo.png" alt="Bootstrap" style="max-width: 50px; margin-right: 10px;">
-                <h2 class="text-success ms-0">ONLINE GOVERNMENT APPLICATION SYSTEM</h2>
+                <h2 class="text-teal ms-0">ONLINE GOVERNMENT APPLICATION SYSTEM</h2>
             </a>
         </div>
         <div class="text-end">
-            <a href="../admin/login.php" class="text-success text-decoration-none fw-bold">ADMIN LOGIN</a>
+            <a href="../admin/login.php" class="text-teal text-decoration-none fw-bold">ADMIN LOGIN</a>
         </div>
     </div>
 
     <!-- End of Logo -->
     <!-- Start of Navbar -->
-    <nav class="nav justify-content-center bg-success">
+    <nav class="nav justify-content-center bg-teal">
         <a class="nav-link  link-light active" aria-current="page" href="#">HOME</a>
         <a class="nav-link  link-light" href="#">REGISTER</a>
         <a class="nav-link  link-light" href="#">HOW TO APPLY</a>
@@ -41,10 +41,26 @@
     <!-- End of Navbar -->
 
     <!-- Start of main content -->
+
+    <!-- Background Picture First -->
+
+    <!-- End of Background Picture -->
+
+
+
     <div class="container mt-5">
         <h1 class="my-5">Registration Form</h1>
         <form action="function.php" method="post" enctype="multipart/form-data">
             <div class="row mb-3">
+            <div class="col-md-4">
+                    <label for="bloodType" class="form-label">ID Type</label>
+                    <select class="form-select" id="idType" name="idType" required="">
+                        <option value="" disabled="" selected="">Select an ID</option>
+                        <option value="barangay id">Barangay ID</option>
+                        <option value="senior citizen">Senior Citizen</option>
+                        <option value="pwd">PWD</option>
+                    </select>
+                </div>
                 <div class="col-md-4">
                     <label for="firstName" class="form-label">First Name</label>
                     <input type="text" name="firstName" class="form-control" id="firstName" required="">
@@ -53,13 +69,13 @@
                     <label for="lastName" class="form-label">Last Name</label>
                     <input type="text" name="lastName" class="form-control" id="lastName" required="">
                 </div>
-                <div class="col-md-4">
-                    <label for="middleName" class="form-label">Middle Name</label>
-                    <input type="text" name="middleName" class="form-control" id="middleName">
-                </div>
             </div>
 
             <div class="row mb-3">
+            <div class="col-md-4">
+                    <label for="middleName" class="form-label">Middle Name</label>
+                    <input type="text" name="middleName" class="form-control" id="middleName">
+                </div>
                 <div class="col-md-4">
                     <label for="dateOfBirth" class="form-label">Date of Birth</label>
                     <input type="date" name="dateOfBirth" class="form-control" id="dateOfBirth" required="">
@@ -77,7 +93,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+            </div>
+
+            <!-- Add other form fields as needed -->
+
+
+            <div class="row mb-3">
+            <div class="col-md-4">
                     <label for="bloodType" class="form-label">Blood Type</label>
                     <select class="form-select" id="bloodType" name="bloodType" required="">
                         <option value="" disabled="" selected="">Select Blood Type</option>
@@ -87,12 +109,6 @@
                         <option value="O">O</option>
                     </select>
                 </div>
-            </div>
-
-            <!-- Add other form fields as needed -->
-
-
-            <div class="row mb-3">
                 <div class="col-md-4">
                     <label for="firstName" class="form-label">Country of Birth</label>
                     <input type="text" name="countryOfBirth" class="form-control" id="firstName" required="">
@@ -101,18 +117,18 @@
                     <label for="firstName" class="form-label">Province</label>
                     <input type="text" name="province" class="form-control" id="firstName" required="">
                 </div>
-                <div class="col-md-4">
-                    <label for="lastName" class="form-label">Municipality/City</label>
-                    <input type="text" name="municipalityCity" class="form-control" id="lastName" required="">
-                </div>
 
             </div>
             <div class="row mb-3">
+            <div class="col-md-4">
+                    <label for="lastName" class="form-label">Municipality/City</label>
+                    <input type="text" name="municipalityCity" class="form-control" id="lastName" required="">
+                </div>
                 <div class="col-md-4">
                     <label for="middleName" class="form-label">Barangay</label>
                     <input type="text" name="barangay" class="form-control" id="middleName">
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-4">
                     <label for="exampleFormControlTextarea1" class="form-label">Address</label>
                     <textarea class="form-control" name="address" id="exampleFormControlTextarea1" rows="2"></textarea>
                 </div>

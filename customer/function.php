@@ -5,7 +5,7 @@ include "../php-connect/db-conn.php";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    
+    $idType = $_POST['idType'];
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $middleName = $_POST['middleName'];
@@ -69,8 +69,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
          return $destination; // Return the file path for database storage
      }
 
-     $query = "INSERT INTO tbl_customer (firstName, lastName, middleName, dateOfBirth, gender, bloodType, countryOfBirth, province, municipalityCity, barangay, address)
-         VALUES ('$firstName', '$lastName', '$middleName', '$dateOfBirth', '$gender', '$bloodType', '$countryOfBirth', '$province', '$municipalityCity', '$barangay', '$address')";
+     $query = "INSERT INTO tbl_customer (idType, firstName, lastName, middleName, dateOfBirth, gender, bloodType, countryOfBirth, province, municipalityCity, barangay, address)
+         VALUES ('$idType','$firstName', '$lastName', '$middleName', '$dateOfBirth', '$gender', '$bloodType', '$countryOfBirth', '$province', '$municipalityCity', '$barangay', '$address')";
      mysqli_query($conn, $query);
 
  

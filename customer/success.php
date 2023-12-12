@@ -45,11 +45,11 @@ session_start();
         <a class="navbar-brand" href="#">
             <img src="../img/government-registration-logo.png" alt="Bootstrap" style="max-width: 50px;">
         </a>
-        <h2 class="text-success ms-3">ONLINE GOVERNMENT APPLICATION SYSTEM</h2>
+        <h2 class="text-teal ms-3">ONLINE GOVERNMENT APPLICATION SYSTEM</h2>
     </div>
     <!-- End of Logo -->
     <!-- Start of Navbar -->
-    <nav class="nav justify-content-center bg-success">
+    <nav class="nav justify-content-center bg-teal">
         <a class="nav-link  link-light active" aria-current="page" href="#">HOME</a>
         <a class="nav-link  link-light" href="#">REGISTER</a>
         <a class="nav-link  link-light" href="#">HOW TO APPLY</a>
@@ -62,7 +62,7 @@ session_start();
     <!-- Start of Main Content -->
     <div class="container mt-5">
     <div class="text-center">
-        <img src="../img/check-green.png" alt="Check Icon" class="img-fluid" style="max-width: 200px;">
+        <img src="../img/check.png" alt="Check Icon" class="img-fluid" style="max-width: 200px;">
         <h2 class="mt-3">Application Successful</h2>
         <p>Your application was successfully accepted by the system and will be processed. You can check the status page for your application updates.</p>
     </div>

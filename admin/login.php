@@ -18,11 +18,11 @@
         <a class="navbar-brand" href="#">
             <img src="../img/government-registration-logo.png" alt="Bootstrap" style="max-width: 50px;">
         </a>
-        <h2 class="text-success ms-3">ONLINE GOVERNMENT APPLICATION SYSTEM</h2>
+        <h2 class="text-teal ms-3">ONLINE GOVERNMENT APPLICATION SYSTEM</h2>
     </div>
     <!-- End of Logo -->
     <!-- Start of Navbar -->
-    <nav class="nav justify-content-center bg-success">
+    <nav class="nav justify-content-center bg-teal">
         <a class="nav-link  link-light active" aria-current="page" href="#">HOME</a>
         <a class="nav-link  link-light" href="#">REGISTER</a>
         <a class="nav-link  link-light" href="#">HOW TO APPLY</a>
@@ -55,7 +55,7 @@
                     <label for="rememberMe" class="form-check-label">Remember me</label>
                 </div>
                 <div class="text-center">
-                    <button class="btn btn-success btn-block" value="admin-log-in" name="submit" type="submit">Sign in</button>
+                    <button class="btn btn-primary btn-block" value="admin-log-in" name="submit" type="submit">Sign in</button>
                 </div>
                 <p class="mt-5 mb-3 text-muted text-center">© 2023 ALL RIGHTS RESERVED</p>
             </form>

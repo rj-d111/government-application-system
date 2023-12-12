@@ -44,7 +44,7 @@ if(isset($_SESSION['email'])){
         <div class="d-flex align-items-center me-auto">
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="../img/government-registration-logo.png" alt="Bootstrap" style="max-width: 50px; margin-right: 10px;">
-                <h2 class="text-success ms-0">ONLINE GOVERNMENT APPLICATION SYSTEM</h2>
+                <h2 class="text-teal ms-0">ONLINE GOVERNMENT APPLICATION SYSTEM</h2>
             </a>
         </div>
         <div class="text-end">
@@ -54,7 +54,7 @@ if(isset($_SESSION['email'])){
 
     <!-- End of Logo -->
     <!-- Start of Navbar -->
-    <nav class="nav justify-content-center bg-success">
+    <nav class="nav justify-content-center bg-teal">
         <a class="nav-link  link-light active" aria-current="page" href="#">HOME</a>
         <a class="nav-link  link-light" href="#">REGISTER</a>
         <a class="nav-link  link-light" href="#">HOW TO APPLY</a>
@@ -67,7 +67,7 @@ if(isset($_SESSION['email'])){
 
 
     <div class="container my-5">
-        <h1 class="text-success">Registration Approval</h1>
+        <h1 class="text-teal">Registration Approval</h1>
 
         <table class="table table-striped table-hover">
         <thead>
