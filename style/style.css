@@ -5,12 +5,20 @@
 }	
 
 .bg-teal{
-
     background-color: var(--dark-teal);
 }
 
 .text-teal{
     color: var(--dark-teal);
+}
+
+.btn-teal{
+    background-color: var(--dark-teal);
+}
+
+
+.btn-teal:hover{
+    background-color: var(--dark-teal);
 }
 
 
