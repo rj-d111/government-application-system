@@ -15,12 +15,16 @@
 </head>
 
 <body>
-    <!-- Start of Logo -->
-    <div class="container d-flex align-items-center my-3 mx-auto text-center">
+
+    
+    <!-- Navbar in mobile devices -->
+    <div> 
+     <!-- Start of Logo -->
+     <div class="container-md d-flex align-items-center my-3 mx-auto text-center">
         <div class="d-flex align-items-center me-auto">
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="img/government-registration-logo.png" alt="Bootstrap" style="max-width: 50px; margin-right: 10px;">
-                <h2 class="text-teal ms-0">ONLINE GOVERNMENT APPLICATION SYSTEM</h2>
+                <h4 class="text-teal ms-0 mb-0">ONLINE GOVERNMENT APPLICATION SYSTEM</h4>            
             </a>
         </div>
         <div class="text-end">
@@ -29,13 +33,50 @@
     </div>
 
     <!-- End of Logo -->
-    <!-- Start of Navbar -->
-    <nav class="nav justify-content-center bg-teal">
-        <a class="nav-link  link-light active" aria-current="page" href="#">HOME</a>
-        <a class="nav-link  link-light" href="#">REGISTER</a>
-        <a class="nav-link  link-light" href="#">HOW TO APPLY</a>
-        <a class="nav-link  link-light" href="#">REQUIREMENTS</a>
-        <a class="nav-link  link-light" href="#">CHECK STATUS</a>
-        <a class="nav-link  link-light" href="#">CONTACT US</a>
-    </nav>
-    <!-- End of Navbar -->
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-teal" aria-label="Offcanvas navbar large">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+        <div class="offcanvas-header bg-teal">
+          <h5 class="offcanvas-title" id="offcanvasNavbar2Label">MENU</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body bg-teal">
+          <ul class="navbar-nav justify-content-evenly flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">HOW TO REGISTER</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">REQUIREMENTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CHECK STATUS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CONTACT US</a>
+            </li>
+            <span class="admin-log-in">
+            <hr>
+            <li class="nav-item">
+              <a class="nav-link" href="admin/login.php">ADMIN LOG IN</a>
+            </li>
+            </span>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+    </div> 
+    <!-- End of navbar in mobile devices -->
+
+
+
+    <!-- Script for navbar -->
+    <script src="script/navbar.js"></script>

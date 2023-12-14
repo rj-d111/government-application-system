@@ -8,19 +8,41 @@
     background-color: var(--dark-teal);
 }
 
+
 .text-teal{
     color: var(--dark-teal);
 }
 
 .btn-teal{
     background-color: var(--dark-teal);
+    color: white;
 }
-
 
 .btn-teal:hover{
     background-color: var(--dark-teal);
+    color:white;
 }
 
+.btn-teal:active{
+    background-color: var(--dark-teal);
+}
+
+.hide-picture{
+        overflow: hidden;  
+        max-width: 100vw; /* Ensure container doesn't exceed viewport width */
+  
+}
+
+.hide-picture img{
+    max-height: 450px;
+}
+
+
+.bg-index{
+    background-color: #e3ecff;
+    background-image: linear-gradient(135deg, #e3ecff 0%, #9091d6 100%);  
+
+}
 
 .pwd-reg-page {
     height: 120vh;
