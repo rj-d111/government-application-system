@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="../style/style.css">
     </head>
 </head>
 
@@ -23,14 +23,14 @@
      <!-- Start of Logo -->
      <div class="container-md d-flex align-items-center my-3 mx-auto text-center">
         <div class="d-flex align-items-center me-auto">
-            <a class="navbar-brand d-flex align-items-center" href="navbar.php">
-                <img src="img/government-registration-logo.png" alt="Bootstrap" style="max-width: 50px; margin-right: 10px;">
+            <a class="navbar-brand d-flex align-items-center" href="../index.php">
+                <img src="../img/government-registration-logo.png" alt="Bootstrap" style="max-width: 50px; margin-right: 10px;">
                 <h4 class="text-teal ms-0 mb-0">ONLINE GOVERNMENT APPLICATION SYSTEM</h4>            
             </a>
         </div>
-        <div class="text-end">
+        <!-- <div class="text-end">
             <a href="admin/login.php" class="text-teal text-decoration-none fw-bold">ADMIN LOGIN</a>
-        </div>
+        </div> -->
     </div>
 
     <!-- End of Logo -->
@@ -62,13 +62,6 @@
             <li class="nav-item">
               <a class="nav-link" href="#">CONTACT US</a>
             </li>
-            <span class="admin-log-in">
-            <hr>
-            <li class="nav-item">
-              <a class="nav-link" href="admin/login.php">ADMIN LOG IN</a>
-            </li>
-            </span>
-            
           </ul>
         </div>
       </div>
@@ -80,4 +73,4 @@
 
 
     <!-- Script for navbar -->
-    <script src="script/navbar.js"></script>
+    <script src="../script/admin-script.js"></script>
