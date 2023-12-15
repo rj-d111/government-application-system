@@ -20,25 +20,25 @@
 </section>
 <!-- End of Background Picture -->
 
-<section class="container">
-    <div class="row my-5">
+<section class="container" id="id-types">
+    <div class="row my-5 d-flex justify-content-evenly">
         <!-- Barangay ID -->
         <div class="col-sm-6 col-md-4 text-center my-3">
-            <img src="img/id1.png" class="img-fluid" alt="Barangay ID" srcset="">
+            <img src="img/id1.png" class="img-fluid mb-3" alt="Barangay ID" srcset="">
             <h4 class="text-teal">Barangay ID</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <a href="customer/fill-out.php" class="btn btn-teal rounded-pill">Apply Now</a>
         </div>
         <!-- Senior Citizen ID -->
         <div class="col-sm-6 col-md-4 text-center my-3">
-            <img src="img/id2.png" class="img-fluid" alt="Senior Citizen ID" srcset="">
+            <img src="img/id2.png" class="img-fluid mb-3" alt="Senior Citizen ID" srcset="">
             <h4 class="text-teal">Senior Citizen ID</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <a href="customer/fill-out.php" class="btn btn-teal rounded-pill">Apply Now</a>
         </div>
         <!-- PWD ID -->
         <div class="col-sm-6 col-md-4 text-center my-3">
-            <img src="img/id3.png" class="img-fluid" alt="PWD ID" srcset="">
+            <img src="img/id3.png" class="img-fluid mb-3" alt="PWD ID" srcset="">
             <h4 class="text-teal">PWD ID</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <a href="customer/fill-out.php" class="btn btn-teal rounded-pill">Apply Now</a>
@@ -60,19 +60,67 @@
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-2">
             <img src="img/step2.png" alt="" srcset="" class="img-fluid">
-            <p>Complete the online form with your personal details.</p>
+            <p>Upload the required digital documents for ID verification.</p>
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-2">
             <img src="img/step3.png" alt="" srcset="" class="img-fluid">
-            <p>Complete the online form with your personal details.</p>
+            <p>Review the information provided for accuracy. Confirm that all required fields are filled, and digital documents are attached.</p>
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-2">
             <img src="img/step4.png" alt="" srcset="" class="img-fluid">
-            <p>Complete the online form with your personal details.</p>
+            <p>Submit your application for processing.</p>
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-2">
             <img src="img/step5.png" alt="" srcset="" class="img-fluid">
-            <p>Complete the online form with your personal details.</p>
+            <p>Upon successful verification, receive an email notification of ID approval. Download the digital government ID attachment from the email.</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- Application Steps -->
+<section class="bg-teal py-3">
+    <h4 class="text-white text-center mb-0">Requirements</h4>
+</section>
+
+<!-- Application Per Each -->
+<section class="container my-5" id="application">
+    <div class="row d-flex justify-content-evenly">
+            <div class="card col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Barangay ID</h5>
+                    <ul class="ps-3 mb-0">
+                        <li>Requirement 1</li>
+                        <li>Requirement 2</li>
+                        <li>Requirement 3</li>
+                        <li>Requirement 4</li>
+                        <li>Requirement 5</li>
+                    </ul>   
+                </div>
+            </div>
+        <div class="card col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div class="card-body">
+                <h5 class="card-title text-center">Senior Citizen ID</h5>
+                <ul class="ps-3 mb-0">
+                    <li>Requirement 1</li>
+                    <li>Requirement 2</li>
+                    <li>Requirement 3</li>
+                    <li>Requirement 4</li>
+                    <li>Requirement 5</li>
+                </ul>   
+            </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div class="card-body">
+                <h5 class="card-title text-center">PWD ID</h5>
+                <ul class="ps-3 mb-0">
+                    <li>Requirement 1</li>
+                    <li>Requirement 2</li>
+                    <li>Requirement 3</li>
+                    <li>Requirement 4</li>
+                    <li>Requirement 5</li>
+                </ul>   
+            </div>
         </div>
     </div>
 
@@ -80,45 +128,4 @@
 
 <!-- End of main content -->
 
-<!-- Start of Footer -->
-<footer class="bg-secondary text-white text-center text-lg-start mt-5">
-    <!-- Grid container -->
-    <div class="container p-4">
-        <!--Grid row-->
-        <div class="row">
-            <!--Grid column-->
-            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                <h5 class="text-uppercase">ABOUT</h5>
-
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                    molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-                    voluptatem veniam, est atque cumque eum delectus sint!
-                </p>
-            </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                <h5 class="text-uppercase">CONTACT US</h5>
-
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                    molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-                    voluptatem veniam, est atque cumque eum delectus sint!
-                </p>
-            </div>
-            <!--Grid column-->
-        </div>
-        <!--Grid row-->
-    </div>
-    <!-- Grid container -->
-
-</footer>
-<!-- End of Footer -->
-
-<!-- Insert Javascript -->
-<script src="script/index.js"></script>
-</body>
-
-</html>
+<?php include "footer.php" ?>

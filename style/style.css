@@ -61,3 +61,22 @@
     margin: 0 28px;
     border-radius: 10px;
 }
+
+.fa {
+    font-size: 24px;
+    color: white;
+    margin-right: 1rem;
+  }
+
+/* @media (min-width: 576px){
+    #application>div>div{
+        max-width: calc(960px-90px);
+    }
+} */
+
+/* @media (max-width: 576px){
+    #application>div>div{
+        padding-left: calc(1.5*.5);
+        padding-right: calc(1.5*.5);
+    }
+} */

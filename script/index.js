@@ -1,6 +1,6 @@
 function adjustImageClass() {
   const imgElements = document.querySelectorAll(".bg-img-1"); // Get all images within divs
-
+  const imgIds = document.querySelectorAll("#id-types .col-sm-6");
   // Check screen width
   const screenWidth = window.innerWidth;
 
@@ -11,6 +11,14 @@ function adjustImageClass() {
     } else {
       // Remove "img-fluid" class if screen is 768px or larger
       img.classList.remove("img-fluid");
+    }
+  }
+
+  for(const imgId of imgIds){
+    if(screenWidth > 1024){
+      imgId.classList.add("p-4");
+    }else{
+      imgId.classList.remove("p-4");
     }
   }
 }
