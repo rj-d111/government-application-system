@@ -23,6 +23,8 @@ if (isset($_SESSION['error-msg'])) {
     if ($_SESSION['error-msg']) {
         noSearchHandler();
     }
+}else{
+    echo "<br><br><br>";
 }
 if (isset($_SESSION['status'])) {
     switch ($_SESSION['status']) {

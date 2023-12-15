@@ -48,7 +48,7 @@
         <div class="offcanvas-body bg-teal">
           <ul class="navbar-nav justify-content-evenly flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#section-1">HOME</a>
+              <a class="nav-link active" aria-current="page" href="../index.php">HOME</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#id-types">REGISTER</a>
