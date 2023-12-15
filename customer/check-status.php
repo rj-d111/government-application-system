@@ -32,8 +32,8 @@ if (isset($_SESSION['status'])) {
             break;
 
         case "rejected":
-            break;
             rejectedHandler();
+            break;
         case "approved":
             approvedHandler();
             break;
@@ -69,7 +69,7 @@ session_destroy();
         <h3 class="text-teal text-center mb-5">Your application is still processing...</h3>
 
         <!-- Body Content -->
-        <p>This message is to inform you that your application for a <strong><?php echo $_SESSION['id-type'] ?> </strong> is currently pending. We appreciate your patience while we process your request.</p>
+        <p>This message is to inform you that your application for a <strong><?php echo ucwords($_SESSION['id-type']) ?> ID</strong> is currently pending. We appreciate your patience while we process your request.</p>
         <h4 class="text-teal">Estimated Timeline</h4>
         <p><strong>Expected review timeframe: </strong>[Provide estimated timeframe, e.g., 2-4 weeks, depending on your specific government agency's guidelines].</p>
         <p><strong>Updates will be provided: </strong>We'll send you updates on your application status via [Preferred communication channel, e.g., SMS, email]. Please ensure your contact information on your application is accurate and up-to-date.</p>
@@ -95,9 +95,9 @@ session_destroy();
         <div class="col-lg-3 col-md-4 col-sm-6 col-8 ms-auto me-auto">
             <img src="../img/rejected-form.png" class="img-fluid" alt="Pending" srcset="">
         </div>
-        <h3 class="text-teal text-center mb-5">Your application has been rejected...</h3>
-        <p>Thank you for your interest in applying for a <strong><?php echo $_SESSION['id-type'] ?> </strong> through our website. We appreciate you taking the time to submit your application.</p>
-        <p>We regret to inform you that your application for a <strong><?php echo $_SESSION['id-type'] ?>
+        <h3 class="text-teal text-center mb-5">Your application has been rejected</h3>
+        <p>Thank you for your interest in applying for a <strong><?php echo ucwords($_SESSION['id-type']) ?> </strong> through our website. We appreciate you taking the time to submit your application.</p>
+        <p>We regret to inform you that your application for a <strong><?php echo ucwords($_SESSION['id-type']) ?>
             </strong> has not been approved at this time.</p>
         <h4 class="text-teal">Reason for rejection:</h4>
         <ul>
@@ -117,7 +117,50 @@ session_destroy();
 
 <?php function approvedHandler()
 { ?>
+<section class="container mt-5">
+        <h4 class="text-teal">Order Status</h4>
+        <p>Your application ID: <?php echo $_SESSION['ref-no'] ?></p>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-8 ms-auto me-auto">
+            <img src="../img/accepted-form.png" class="img-fluid" alt="Pending" srcset="">
+        </div>
+        <h3 class="text-teal text-center mb-5">Congratulations! Your <?php echo ucwords($_SESSION['id-type']) ?> ID has been successfully approved</h3>
+        <p>Thank you for using our website to apply for Barangay ID, Senior Citizen ID, or PWD ID. We're excited to help you! Here's what you need to know:</p>
+        <h4 class="text-teal">What happens next?</h4>
+        <ul>
+            <li><strong>Your order is waiting for payment</strong><br>
+            This means that your order was successfully accepted by the system and will be processed as soon as your payment posts. To see the list of available payment channels, please click <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+  here
+</a>
+.
+            </li>
+            <li><strong>ID Claiming</strong><br>
+            This After successful payment, you can claim your ID at [Claiming location] on [Claiming schedule] by presenting the provided claim slip and a valid government-issued ID.
+            </li>
+        </ul>
+        <h4 class="text-teal">Stay informed</h4>
+        <ul>
+            <li><strong>Application status: </strong>Keep an eye on your email or SMS for updates on your application status. You can also track your application online by logging in to your account with the reference number provided in your application confirmation email.
+            </li>
+            <li><strong>News and updates: </strong>Visit our website or social media pages for any important announcements regarding ID processing or claiming schedules.</li>
+        </ul>
+        <h4 class="text-teal">Get Help</h4>
+        <ul>
+            <li><strong>Frequently Asked Questions (FAQs): </strong>Check our FAQs section on the website for answers to common questions about the application process, fees, and claiming.</li>
+            <li><strong>Contact us: </strong>If you have any further questions or concerns, please don't hesitate to contact us through<br>
+            <ul>
+                <li><strong>Email: </strong>governmentapplication@gmail.com</li>
+                <li><strong>Contact No: </strong>+6344 667 7777</li>
+            </ul>
+        </li>
+        </ul>
+        <h4 class="text-teal">Additional Tips</h4>
+        <ul>
+            <li><strong>Be patient: </strong>The processing and claiming process may take some time. We appreciate your patience and understanding.</li>
+        </ul>
+        <p>We hope this information is helpful. We look forward to welcoming you to our barangay with your new ID!</p>
 
+
+</section>
 <?php } //End of approved handler 
 ?>
 
