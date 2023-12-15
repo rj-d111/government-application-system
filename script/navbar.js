@@ -35,6 +35,14 @@ function adjustTitleFontSize() {
 
     const adjustTop = document.querySelector("#fix-top");
     adjustTop.style.height = navbarHeight + "px";
+
+    const imgWhite = document.querySelector("#logo-white");
+    console.log(imgWhite); // Print the width to the console
+    if(screenWidth > 768){
+      imgWhite.classList.add("d-none");
+    }else{
+      imgWhite.classList.remove("d-none");      
+    }
   }
   
 

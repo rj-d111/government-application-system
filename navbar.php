@@ -36,10 +36,14 @@
     <!-- End of Logo -->
 
     <nav class="navbar navbar-expand-md navbar-dark bg-teal" aria-label="Offcanvas navbar large">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="index.php">
+          <img src="img/government-white.png" alt="" srcset="" id="logo-white" class="img-fluid position-absolute start-50 bottom-0" style="height: 55px;">
+        </a>
       <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
         <div class="offcanvas-header bg-teal">
           <h5 class="offcanvas-title" id="offcanvasNavbar2Label">MENU</h5>
@@ -76,6 +80,7 @@
         </div>
       </div>
     </div>
+   
   </nav>
     </div> 
     <!-- End of navbar in mobile devices -->
