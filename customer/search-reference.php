@@ -19,6 +19,20 @@ if(mysqli_num_rows($result)>0){
         $_SESSION['email'] = $row['email'];
         $_SESSION['id-type']= $row['idType'];
         $_SESSION['status'] = $row['status'];
+        $_SESSION['id-type'] = "";
+       
+switch($row['idType']){
+    case "barangay id":
+        $_SESSION['id-type'] = "Barangay ID";
+        break;
+    case "senior citizen":
+        $_SESSION['id-type'] = "Senior Citizen ID";
+        break;
+    case "pwd":
+        $_SESSION['id-type'] = "PWD ID";
+        break;
+}
+
 
         echo "
                 {$_SESSION['ref-no']} {$_SESSION['email']} {$_SESSION['id-type']} {$_SESSION['status']}

@@ -1,6 +1,8 @@
 <?php
 
 session_start();
+
+
 include "navbar.php" ?>
 
 <!-- Start of Main Content -->
@@ -71,7 +73,7 @@ session_destroy();
         <h3 class="text-teal text-center mb-5">Your application is still processing...</h3>
 
         <!-- Body Content -->
-        <p>This message is to inform you that your application for a <strong><?php echo ucwords($_SESSION['id-type']) ?> ID</strong> is currently pending. We appreciate your patience while we process your request.</p>
+        <p>This message is to inform you that your application for a <strong><?php echo ucwords($_SESSION['id-type']) ?> </strong> is currently pending. We appreciate your patience while we process your request.</p>
         <h4 class="text-teal">Estimated Timeline</h4>
         <p><strong>Expected review timeframe: </strong>[Provide estimated timeframe, e.g., 2-4 weeks, depending on your specific government agency's guidelines].</p>
         <p><strong>Updates will be provided: </strong>We'll send you updates on your application status via [Preferred communication channel, e.g., SMS, email]. Please ensure your contact information on your application is accurate and up-to-date.</p>

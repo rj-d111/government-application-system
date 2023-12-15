@@ -29,10 +29,11 @@ session_start();
     <div class="text-center">
         <img src="../img/check.png" alt="Check Icon" class="img-fluid" style="max-width: 200px;">
         <h2 class="mt-3">Application Successful</h2>
-        <p>Your application was successfully accepted by the system and will be processed. You can check the status page for your application updates.</p>
+        <p class="mb-1">Your application was successfully accepted by the system and will be processed.</p>
+        <p >You can check the status page for your application updates.</p>
     </div>
-
-    <div class="mt-4">
+<div class="d-flex justify-content-center">
+    <div class="mt-4 col-md-7">
         <div class="mb-3">
             <label for="referenceCode" class="form-label">Reference Code:</label>
             <div class="input-group">
@@ -44,6 +45,7 @@ session_start();
             <strong>Note:</strong> Click the "Copy" button to copy the reference code to the clipboard.
         </div>
     </div>
+</div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
@@ -71,4 +73,4 @@ session_start();
 </body>
 
 
- 
+ <?php include "../footer.php" ?>

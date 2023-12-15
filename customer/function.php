@@ -9,6 +9,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $middleName = $_POST['middleName'];
+    $email = $_POST['email'];
     $dateOfBirth = $_POST['dateOfBirth'];
     $gender = $_POST['gender'];
     $bloodType = $_POST['bloodType'];
@@ -69,20 +70,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
          return $destination; // Return the file path for database storage
      }
 
-     $query = "INSERT INTO tbl_customer (idType, firstName, lastName, middleName, dateOfBirth, gender, bloodType, countryOfBirth, province, municipalityCity, barangay, address)
-         VALUES ('$idType','$firstName', '$lastName', '$middleName', '$dateOfBirth', '$gender', '$bloodType', '$countryOfBirth', '$province', '$municipalityCity', '$barangay', '$address')";
+     $query = "INSERT INTO tbl_customer (idType, firstName, lastName, middleName, email, dateOfBirth, gender, bloodType, countryOfBirth, province, municipalityCity, barangay, address)
+         VALUES ('$idType','$firstName', '$lastName', '$middleName', '$email' ,'$dateOfBirth', '$gender', '$bloodType', '$countryOfBirth', '$province', '$municipalityCity', '$barangay', '$address')";
      mysqli_query($conn, $query);
 
- 
- 
- 
         // Get the auto-incremented ID of the last inserted record
         $customerID = mysqli_insert_id($conn);
       
         //Pass the customerID to another PHP file
         $_SESSION['customerID'] = $customerID;
 
-        echo $customerID;
         // Upload Birth Certificate
         $birthCertificatePath = uploadFile('birthCertificate', 'uploads/' . $customerID, $allowedFormats, $maxFileSize);
 
@@ -93,12 +90,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $clientPicturePath = uploadFile('clientPicture', 'uploads/' . $customerID, $allowedFormats, $maxFileSize);
 
 
-            //put into the database   
+        //put the pictures into the database   
          $sql = "UPDATE tbl_customer SET birthCertificate='$birthCertificatePath', proofOfResidency='$proofOfResidencyPath', 
          clientPicture='$clientPicturePath' WHERE customerID='$customerID'";
         mysqli_query($conn, $sql);
 
-        
+        //put proof of disability to the database        
+        if($idType == 'pwd'){
+            $proofOfDisabilityPath = uploadFile('proofOfDisability', 'uploads/' . $customerID, $allowedFormats, $maxFileSize);
+           //put into the database   
+           $sql = "UPDATE tbl_customer SET proofOfDisability='$proofOfDisabilityPath' WHERE customerID='$customerID'";
+           mysqli_query($conn, $sql);
+        }
+
         echo "<script>alert('The id is $customerID');</script>";
         
         //Return to fill out form
