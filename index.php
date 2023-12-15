@@ -4,7 +4,7 @@
 <!-- Start of main content -->
 
 <!-- Background Picture First -->
-<section class="section bg-index hide-picture">
+<section class="section bg-index hide-picture" id="section-1">
     <div class="container">
         <div class="row">
             <div class="col-md-6 text-teal">
@@ -47,7 +47,7 @@
 </section>
 
 <!-- Application Steps -->
-<section class="bg-teal py-3">
+<section class="bg-teal py-3" id="section-3">
     <h4 class="text-white text-center mb-0">Application Steps</h4>
 </section>
 
@@ -79,14 +79,14 @@
 </section>
 
 <!-- Application Steps -->
-<section class="bg-teal py-3">
+<section class="bg-teal py-3" id="section-4">
     <h4 class="text-white text-center mb-0">Requirements</h4>
 </section>
 
 <!-- Application Per Each -->
 <section class="container my-5" id="application">
     <div class="row d-flex justify-content-evenly">
-            <div class="card col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div class="card col-10 col-sm-5 col-md-5 col-lg-3 mb-3">
                 <div class="card-body">
                     <h5 class="card-title text-center">Barangay ID</h5>
                     <ul class="ps-3 mb-0">
@@ -98,7 +98,7 @@
                     </ul>   
                 </div>
             </div>
-        <div class="card col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+        <div class="card col-10 col-sm-5 col-md-5 col-lg-3 mb-3">
             <div class="card-body">
                 <h5 class="card-title text-center">Senior Citizen ID</h5>
                 <ul class="ps-3 mb-0">
@@ -110,7 +110,7 @@
                 </ul>   
             </div>
         </div>
-        <div class="card col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+        <div class="card col-10 col-sm-5 col-md-5 col-lg-3 mb-3">
             <div class="card-body">
                 <h5 class="card-title text-center">PWD ID</h5>
                 <ul class="ps-3 mb-0">

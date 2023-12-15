@@ -1,11 +1,11 @@
 <!-- Start of Footer -->
-<footer class="bg-dark text-white text-center text-lg-start mt-5">
+<footer class="bg-dark text-white text-center text-lg-start mt-5" id="section-5">
     <!-- Grid container -->
     <div class="container p-4">
         <!--Grid row-->
         <div class="row">
             <!--Grid column-->
-            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <div class="col-lg-7 col-md-7 mb-4 mb-md-0">
                 <h5 class="text-uppercase text-center">ABOUT</h5>
 
                 <p>
@@ -22,7 +22,7 @@
             <!--Grid column-->
 
             <!--Grid column-->
-            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <div class="col-lg-5 col-md-5 mb-4 mb-md-0">
                 <h5 class="text-uppercase text-center">CONTACT US</h5>
                 <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Your Name" aria-label="name">

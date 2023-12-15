@@ -28,8 +28,17 @@ function adjustTitleFontSize() {
            //Add admin login
            adminLogIn.classList.add("d-none");
     }
+
+    //Adjust navbar top and avoid overlap
+    const navbarHeight = document.querySelector('#navbar-all').offsetHeight;
+    console.log('Navbar height with padding and border:', navbarHeight);
+
+    const adjustTop = document.querySelector("#fix-top");
+    adjustTop.style.height = navbarHeight + "px";
   }
   
+
+
  
   // Call the function initially on page load
   adjustTitleFontSize();

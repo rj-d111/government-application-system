@@ -1,4 +1,5 @@
 function adjustImageClass() {
+
   const imgElements = document.querySelectorAll(".bg-img-1"); // Get all images within divs
   const imgIds = document.querySelectorAll("#id-types .col-sm-6");
   // Check screen width
@@ -21,7 +22,10 @@ function adjustImageClass() {
       imgId.classList.remove("p-4");
     }
   }
+  
 }
+
+
 
 // Call the function initially on page load
 adjustImageClass();
