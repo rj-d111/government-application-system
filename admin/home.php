@@ -85,7 +85,6 @@ include "navbar.php";
                         echo '<td>';
                         echo '<a class="btn btn-primary" href="view-source.php?id=' . $row['referenceCode'] . '">View Source</a>';
                         echo '</td>';
-
                         echo "</tr>";
                         $i++;
                     }

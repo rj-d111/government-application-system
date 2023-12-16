@@ -55,12 +55,19 @@ function adjustTitleFontSize() {
 
 
   }
-  
-
-
- 
+   
   // Call the function initially on page load
   adjustTitleFontSize();
   
   // Call the function again on window resize to dynamically adapt
   window.addEventListener("resize", adjustTitleFontSize);
+
+
+
+
+  window.addEventListener('scroll', () => {
+    const xCoord = window.scrollX;
+    const yCoord = window.scrollY;
+    console.log(`Scrolled to: x: ${xCoord}, y: ${yCoord}`);
+    // Update any UI elements you want to reflect the scroll position
+  });

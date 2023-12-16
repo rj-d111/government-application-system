@@ -23,7 +23,7 @@
      <!-- Start of Logo -->
      <div class="container-md d-flex align-items-center my-3 mx-auto text-center">
         <div class="d-flex align-items-center me-auto">
-            <a class="navbar-brand d-flex align-items-center" href="navbar.php">
+            <a class="navbar-brand d-flex align-items-center" href="index.php">
                 <img src="img/government-registration-logo.png" alt="Bootstrap" style="max-width: 50px; margin-right: 10px;">
                 <h4 class="text-teal ms-0 mb-0">ONLINE GOVERNMENT APPLICATION SYSTEM</h4>            
             </a>
