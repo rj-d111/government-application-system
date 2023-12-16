@@ -16,6 +16,15 @@ function adjustTitleFontSize() {
 
     const divTitle = document.querySelector(".container-md.d-flex.align-items-center.my-3.mx-auto.text-center");
     const adminLogIn = document.querySelector(".admin-log-in");
+    const adminEnd = document.querySelector("#navbar-all .text-end");
+
+    const pathname = window.location.pathname;
+    const expectedText = "/admin/login.php";
+
+    if(pathname.includes(expectedText)) {
+      adminLogIn.classList.add("d-none");
+      adminEnd.classList.add("d-none");
+    }
     
     if(screenWidth < 768){
       divTitle.classList.add("d-none");
@@ -31,18 +40,20 @@ function adjustTitleFontSize() {
 
     //Adjust navbar top and avoid overlap
     const navbarHeight = document.querySelector('#navbar-all').offsetHeight;
-    console.log('Navbar height with padding and border:', navbarHeight);
 
     const adjustTop = document.querySelector("#fix-top");
     adjustTop.style.height = navbarHeight + "px";
 
     const imgWhite = document.querySelector("#logo-white");
-    console.log(imgWhite); // Print the width to the console
     if(screenWidth > 768){
       imgWhite.classList.add("d-none");
     }else{
       imgWhite.classList.remove("d-none");      
     }
+
+
+
+
   }
   
 

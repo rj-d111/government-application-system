@@ -20,51 +20,10 @@ if (!$result) {
 
 
 if (isset($_SESSION['email'])) {
+
+$title = "Admin Home";
+include "navbar.php";
 ?>
-
-
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bootstrap Mockup</title>
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-1iJmfhCYz0SNmHflWWOYtvcIeyfC1Fg6OM1eF/4UfLMZ/kxs+V/Txa/Ch5h8i7x4" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="../style/style.css">
-
-    </head>
-
-    <body>
-        <!-- Start of Logo -->
-        <div class="container d-flex align-items-center my-3 mx-auto text-center">
-            <div class="d-flex align-items-center me-auto">
-                <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="../img/government-registration-logo.png" alt="Bootstrap" style="max-width: 50px; margin-right: 10px;">
-                    <h2 class="text-teal ms-0">ONLINE GOVERNMENT APPLICATION SYSTEM</h2>
-                </a>
-            </div>
-            <div class="text-end">
-                <a href="logout.php" class="text-danger text-decoration-none fw-bold">LOGOUT</a>
-            </div>
-        </div>
-
-        <!-- End of Logo -->
-        <!-- Start of Navbar -->
-        <nav class="nav justify-content-center bg-teal">
-            <a class="nav-link  link-light active" aria-current="page" href="#">HOME</a>
-            <a class="nav-link  link-light" href="#">REGISTER</a>
-            <a class="nav-link  link-light" href="#">HOW TO APPLY</a>
-            <a class="nav-link  link-light" href="#">REQUIREMENTS</a>
-            <a class="nav-link  link-light" href="#">CHECK STATUS</a>
-            <a class="nav-link  link-light" href="#">CONTACT US</a>
-        </nav>
-        <!-- End of Navbar -->
-
-
 
         <div class="container my-5">
 
@@ -123,12 +82,10 @@ if (isset($_SESSION['email'])) {
                         echo '<a class="btn btn-success me-3" href="update.php?id=' . $row['referenceCode'] . '">Approve</a>';
                         echo '<a class="btn btn-danger" href="reject.php?id=' . $row['referenceCode'] . '">Reject </a>';
                         echo '</td>';
-                    ?>
+                        echo '<td>';
+                        echo '<a class="btn btn-primary" href="view-source.php?id=' . $row['referenceCode'] . '">View Source</a>';
+                        echo '</td>';
 
-                        <td>
-                            <button class="btn btn-primary">View Source</button>
-                        </td>
-                    <?php
                         echo "</tr>";
                         $i++;
                     }

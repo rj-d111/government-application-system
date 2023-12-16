@@ -1,4 +1,14 @@
-<?php include "navbar.php" ?>
+<?php 
+//Check if admin is still logged in
+session_start();
+if (isset($_SESSION['email'])) {
+  header("Location: home.php");
+}
+
+
+
+$title = "Admin Log In";
+include "navbar.php" ?>
     <div class="d-flex justify-content-center">
         <div class="card py-3 px-5 my-5 col-lg-4 col-md-6 col-sm-8 col-10" id="admin-login">
             <!-- Start of Login Page-->
