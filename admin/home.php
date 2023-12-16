@@ -6,17 +6,24 @@ include "../php-connect/db-conn.php";
 // Include your database connection logic here
 
 // SQL query to join tbl_application and tbl_customer
-$sql = "SELECT tbl_customer.firstName, tbl_customer.lastName, tbl_customer.idType, tbl_application.status, tbl_application.referenceCode, tbl_application.FormID
-        FROM tbl_application
-        INNER JOIN tbl_customer ON tbl_application.customerID = tbl_customer.customerID";
+ $sql = "SELECT tbl_customer.firstName, tbl_customer.lastName, tbl_customer.idType, tbl_application.status, tbl_application.referenceCode, tbl_application.FormID
+         FROM tbl_application
+         INNER JOIN tbl_customer ON tbl_application.customerID = tbl_customer.customerID";
 
+// Use the $selectedValue in your switch statement and SQL query adjustments
+// switch ($selectedValue) {
+//   case "btnradio2":
+//     $sql .= "WHERE tbl_application.status='pending'";
+//     break;
+// }
+//WHERE status='pending'
 // Execute the query
-$result = mysqli_query($conn, $sql);
 
+$result = mysqli_query($conn, $sql);
 // Check for errors
-if (!$result) {
-    die("Query failed: " . mysqli_error($conn));
-}
+// if (!$result) {
+//     die("Query failed: " . mysqli_error($conn));
+// }
 
 
 if (isset($_SESSION['email'])) {
@@ -30,7 +37,7 @@ include "navbar.php";
             <h1 class="text-teal my-3">Registered Applicants</h1>
         
             <!-- Alert Message -->
-            <?php 
+            <?php
                 if (isset($_SESSION['alertmessage'])) {
                 echo $_SESSION['alertmessage'];
                 // Clear the session variable after displaying
@@ -39,24 +46,19 @@ include "navbar.php";
             <!-- End of Alert Message -->
 
             <!-- Start Group button -->
-            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                <label class="btn btn-outline-primary" for="btnradio1">All</label>
-
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                <label class="btn btn-outline-secondary" for="btnradio2">Pending</label>
-
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                <label class="btn btn-outline-success" for="btnradio3">Approved</label>
-
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-                <label class="btn btn-outline-danger" for="btnradio4">Rejected</label>
-
+            <div class="col-md-4 mb-5">
+                <label for="bloodType" class="form-label">Fetch Results By</label>
+                <select class="form-select" id="fetchval" name="fetchval" required="">
+                    <option value="all" disabled="" selected="">Select Filter</option>
+                    <option value="all">All</option>
+                    <option value="pending">Pending</option>
+                    <option value="approved">Approved</option>
+                    <option value="rejected">Rejected</option>
+                </select>
             </div>
-            <!-- End Group Button -->
 
-
-            <table class="table table-striped table-hover">
+    
+            <table class="table table-striped table-hover"  id="container">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -92,48 +94,11 @@ include "navbar.php";
                 </tbody>
             </table>
         </div>
+ <script src="../script/filter.js"></script>
 
-        <!-- Start of Footer -->
-        <footer class="bg-secondary text-white text-center text-lg-start">
-            <!-- Grid container -->
-            <div class="container p-4">
-                <!--Grid row-->
-                <div class="row">
-                    <!--Grid column-->
-                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">ABOUT</h5>
-
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                            molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-                            voluptatem veniam, est atque cumque eum delectus sint!
-                        </p>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">CONTACT US</h5>
-
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                            molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-                            voluptatem veniam, est atque cumque eum delectus sint!
-                        </p>
-                    </div>
-                    <!--Grid column-->
-                </div>
-                <!--Grid row-->
-            </div>
-            <!-- Grid container -->
-
-        </footer>
-        <!-- End of Footer -->
-    </body>
-
-    </html>
 
 <?php
+   // include "footer.php";
 } else {
     header("Location: login.php");
 }
