@@ -121,7 +121,7 @@
         </div>
         <div class="row mt-5 text-center">
             <div class="col-md-12">
-                <button type="submit" name="submit" class="btn btn-success btn-lg">Submit</button>
+                <button type="submit" name="submit" class="btn btn-teal btn-lg rounded-pill">Submit</button>
             </div>
         </div>
     </form>

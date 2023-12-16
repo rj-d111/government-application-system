@@ -98,7 +98,7 @@ include "navbar.php";
 
 
 <?php
-   // include "footer.php";
+   include "footer.php";
 } else {
     header("Location: login.php");
 }
